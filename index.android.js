@@ -13,9 +13,10 @@ import {
   View
 } from 'react-native';
 
+
 import Products from './src/Products'
 import { TabNavigator } from 'react-navigation'
-import Services from './src/Services'
+import Contact from './src/Contact'
 export default class TabNavigation extends Component
 {
     render()
@@ -27,8 +28,31 @@ export default class TabNavigation extends Component
     }
 }
 
+
 const SimpleApp =TabNavigator({
-  Products :{ screen: Products},
-  Services:{screen: Services}
+  Products :{ 
+    screen: Products
+  },
+  Contact:{
+    screen: Contact
+  },
+},{
+  tabBarOptions: {
+    activeTintColor:'#FFF',
+  style: {
+    backgroundColor: '#42a5f5'
+
+  }
+ }
+
 });
+SimpleApp.navigationOptions = {
+  title: 'MY TITLE',
+  header: {
+    style: {
+      backgroundColor: '#42a5f5',
+    }
+  },
+};
+
 AppRegistry.registerComponent('TabNavigation', () => SimpleApp);
