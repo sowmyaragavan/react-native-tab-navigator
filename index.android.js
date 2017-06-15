@@ -6,25 +6,23 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  Image,
-  View
+    AppRegistry,
+    StyleSheet,
+    Text,
+    Image,
+    View
 } from 'react-native';
 
 
 import Products from './src/Products'
 import { TabNavigator } from 'react-navigation'
 import Contact from './src/Contact'
-export default class TabNavigation extends Component
-{
-    render()
-    {
-      const { navigation } =this.props;
-      return (
-        <Products navigation={ navigation }/>
-      );
+export default class TabNavigation extends Component {
+    render() {
+        const { navigation } = this.props;
+        return (
+            <Products navigation={ navigation }/>
+        );
     }
 }
 
